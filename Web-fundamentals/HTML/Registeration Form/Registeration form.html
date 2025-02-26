@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reg Form</title>
+</head>
+<body>
+    <form method="post">
+        <label>First Name: *</label>
+        <input type="text" name="firstname">
+        <br>
+        <label>Last Name: *</label>
+        <input type="text" name="lastname">
+        <br>
+        <label>Email Address: *</label>
+        <input type="email" name="email">
+        <br>
+        <label>Password: *</label>
+        <input type="password" name="pwd">
+        <br>
+        <label>Confirm Password: *</label>
+        <input type="password" name="pwdCon">
+        <br>
+        <label>Birthday:</label>
+        <input type="date" name="birth">
+        <p>Gender Identity:</p>
+        <input type="radio" name="gender">
+        <label>Male</label>
+        
+        <input type="radio" name="gender">
+        <label>Female</label>
+        
+        <input type="radio" name="gender">
+        <label>i prefer not to answer</label>
+        <br>
+        <p>A short desciption about myself:</p>
+        <textarea name="description" cols="40" rows="5"></textarea>   
+        <br><br>
+        <label >Favorite language:</label>
+        <select>
+            <option value="JavaScript">JavaScript</option>
+            <option value="HTML">HTML</option>
+            <option value="PHP">PHP</option>
+        </select>   
+        <br><br>
+        <input type="checkbox" name="email-updates" checked>
+        <label>Yes ,I would like to receive periodic email updates</label>
+        <br><br>
+        <input type="submit" value="Create Account">
+        <br>
+        <p>* Indicates a required field</p>
+    </form>
+</body>
+</html>

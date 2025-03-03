@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: Kanit;
+    transition: all;
+    transition-duration: 100ms;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 20px;
+    background-color: slategray;
+    border-radius: 16px;
+    box-shadow: 0px 0px 5px rgb(180, 180, 161) ;
+}
+
+.nav-title{
+    font-weight: 300;
+    color: white;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 20px;
+    color: rgba(240, 240, 240, 0.37);
+}
+a:hover{
+    color:rgb(75, 17, 17);
+}
+a.active{
+    color: rgb(75, 17, 17);
+}
+
+.btn{
+    padding-inline: 15px;
+    padding-block: 5px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 3px 3px 5px rgb(29, 54, 80);
+}
+.btn:hover{
+     color: white;
+     background-color: rgb(58, 46, 129);
+     cursor: pointer;
+}

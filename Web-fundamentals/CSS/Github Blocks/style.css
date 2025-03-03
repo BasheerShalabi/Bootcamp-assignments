@@ -1,0 +1,28 @@
+h1,p{
+    text-align: center;
+}
+.main{
+    background-color: bisque;
+   width: 60vw;
+   margin: 0px auto;
+   padding: 10px;
+}
+.main img{
+    height: 200px;
+}
+.first-container{
+    background-color: aquamarine;
+}
+.second-container{
+    background-color: rgb(175, 129, 72);
+}
+.third-container{
+    background-color: rgb(88, 177, 255);
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    padding-block: 10px;
+}

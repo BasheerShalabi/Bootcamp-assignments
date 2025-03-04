@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Calibri
+}
+body{
+    background-color: #005175;
+}
+.container{
+    width: 970px;
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px
+}
+
+header a{
+    color: #caca00;
+    margin: 0 5px;
+}
+header span{
+    color: white;
+}
+
+header > img{
+    width: 300px;
+}
+header section section{
+    background-color: #545454;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px #1b1b1b;
+    padding: 10px 25px;
+}
+header section section input[type="text"]{
+    padding: 10px;
+    border: 3px groove ;
+    outline: none;
+    text-align: center;
+    box-shadow: 2px 2px 4px #1b1b1b;
+    margin: 0 5px 0 0;
+}
+header section section input[type="submit"]{
+    padding: 8px 10px;
+    color: white;
+    border: 3px groove;
+    border-radius: 5px;
+    background-color: #005175;
+    box-shadow: 2px 2px 4px #1b1b1b;
+}
+header section article{
+    display: flex;
+    justify-content: end;
+    margin: 0 20px 5px 0 ;
+}
+nav{
+    background-color: #227fad;
+    padding: 7px 10px;
+    margin: 0px 70px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px #1b1b1b;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 24px;
+    font-weight: 300;
+}
+main > section{
+    display: flex;
+    justify-content: center;
+    padding: 10px 100px;
+}
+main section aside{
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+main section aside ul{
+    color:yellow;
+    list-style-type: ">>";
+    list-style-position: inside;
+    font-size: 10px;
+    text-align: center;
+}
+main aside ul li{
+    padding: 3px;
+}
+main aside ul li a{
+    font-size: 20px;
+    color:white;
+}
+main section section article{
+    text-align: center;
+}
+main section section article p{
+    color:white
+}
+main section section article h4{
+    color:#e4e400;
+    font-size: 23px;
+    font-weight: 300;
+    font-style: italic;
+}
+main section section article span{
+    font-size: 18px; 
+    color:white
+}
+footer article{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: grey;
+    margin: 50px 0 0 0;
+}
+footer p{
+    text-align: center;
+    color: grey;
+    font-size: 12px;
+    margin: 20px 0 0 0;
+}
+footer article h3{
+    font-weight: 300;
+    font-size: 20px;
+}
+main > article{
+    background-color: white;
+    display: flex;
+    text-align: center;
+    padding: 10px 70px;
+}
+main article section p{
+    margin: 0 70px;
+}
+main article section h3{
+    font-weight: 600;
+}
+main article section p span{
+    color: #227fad;
+}
+main article section ul{
+    list-style-position: inside;
+    list-style-type: none;
+}
+main article section ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    color: #227fad;
+}
+main article section hr{
+    border: 2px solid #2d9ed6;
+    margin: 0 10px;
+}
+li div{
+    background-color: black;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    left: 15%;
+    top: 7px;
+}

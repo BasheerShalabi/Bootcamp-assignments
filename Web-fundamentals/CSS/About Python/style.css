@@ -148,10 +148,11 @@ main article section p span{
 }
 main article section ul{
     list-style-position: inside;
-    list-style-type: none;
+     list-style-type:none;
 }
 main article section ul li {
-    display: flex;
+    display: flex; 
+    position: relative;
     justify-content: center;
     align-items: center;
     margin: 0 auto;

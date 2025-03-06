@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dojonary</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dojonary</h1>
+            <input type="text" placeholder="Search">
+            <button onclick="changeText(this)">Login</button>
+        </header>
+        <main>
+            <section class="main-feed">
+                <article class="top-ninja">
+                    <div>
+                        <h2>ninja</h2>
+                        <span>noun</span>
+                        <span>Plural: ninjas</span>
+                        <button onclick="onLike(this)" onmouseover="changeColor(this,'#e6b97f')" onmouseleave="changeColor(this,'#f1d3ab')"> likes </button>
+                    </div>
+                    <p>A practitioner skilled in the <a href="">Japanese</a> art of <a href="">ninjutsu</a></p>
+                </article>
+                <article class="top-ninja">
+                    <div>
+                        <h2>ninja</h2>
+                        <span>noun</span>
+                        <span>Plural: ninjas</span>
+                        <button onclick="onLike(this)" onmouseover="changeColor(this,'#e6b97f')" onmouseleave="changeColor(this,'#f1d3ab')"> likes </button>
+                    </div>
+                    <p>A <a href="">programmer</a> who breaks down problems with <a href="">zen</a>-like focus</p>
+                </article>
+            </section>
+            <aside class="side-feed">
+                <section>
+                    <h2> Dojonary is defined by <span>YOU</span></h2>
+                    <button onclick="rmvElem(this)" onmouseover="changeColor(this,'#2fb185')" onmouseleave="changeColor(this,'#12dd99')">Add Definition</button>
+                </section>
+            </aside>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

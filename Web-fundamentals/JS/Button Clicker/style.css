@@ -1,0 +1,88 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: cursive;
+}
+
+.container{
+    width: 60%;
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+    padding: 6px 30px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(163, 163, 163);
+}
+header h1{
+    font-size: 40px;
+}
+header input{
+    padding: 5px;
+    border: 2px solid;
+}
+header button{
+    padding: 5px 30px;
+    background-color: rgb(71, 71, 255);
+    color: white;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-feed{
+    margin: 15px 15px 0 0;
+    width: 70%;
+}
+.main-feed article{
+    border: 2px solid;
+    margin: 0 0 15px 0;
+}
+.main-feed .top-ninja{
+    display: flex;
+    justify-content:stretch;
+    padding: 10px;
+}
+.main-feed .top-ninja div *{
+   margin: 2px auto;
+   display: block;
+   width: fit-content;
+}
+.main-feed .top-ninja div button{
+    background-color: #f1d3ab;
+    padding: 5px;
+    margin-top: 20px;
+    box-shadow: 2px 2px 2px;
+}
+
+.main-feed .top-ninja a{
+    text-decoration: none;
+}
+.main-feed .top-ninja p{
+    margin: auto;
+}
+.side-feed{
+    margin: 15px 0 0 0;
+    width: 30%;
+}
+.side-feed section{
+    border: 2px solid;
+    padding: 15px;
+}
+.side-feed section h2{
+    font-weight: 400;
+    margin: 0 0 20px 0;
+}
+.side-feed section h2 span{
+    font-weight: 800;
+}
+.side-feed section button{
+    margin: 0 auto;
+    display: block;
+    padding: 8px 35px;
+    background-color: #12dd99;
+    box-shadow: 2px 2px 1px ;
+}

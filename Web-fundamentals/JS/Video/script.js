@@ -8,6 +8,7 @@ function showSettings(element,val){
 
 function doPlay(element){
     element.play()
+    element.muted = false
 }
 function doPause(element){
     element.pause()

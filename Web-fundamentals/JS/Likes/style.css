@@ -1,0 +1,88 @@
+*{
+    font-family:Arial, Helvetica, sans-serif;
+}
+body{
+    width: 60%;
+    margin: 0 auto;
+}
+main{
+    display: flex;
+
+}
+main section{
+    display: block;
+    flex:7;
+}
+main aside{
+    flex: 2;
+}
+main aside section{
+    display: block;
+    border: 2px solid;
+}
+main aside section *{
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+main aside section a{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+main aside section p{
+    font-size: 25px;
+    margin: 20px auto;
+
+    text-align: center;
+}
+div section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+div section label{
+    flex:8;
+    font-size: 30px;
+}
+div section p{
+    flex:2;
+    font-size: large;
+}
+div section button{
+    margin: 0 0 0 10px;
+    padding: 7px 25px;
+    background-color: rgb(255, 217, 167);
+    box-shadow: 2px 2px 2px black;
+}
+div section button:hover{
+    background-color: rgb(224, 190, 145);
+}
+div section button:active{
+    background-color: rgb(224, 190, 145);
+    box-shadow: 1px 1px 2px black;
+}
+div{
+    margin: 0 0 10px 10px;
+    border: 2px solid ;
+    padding: 15px;
+}
+div > p{
+    font-size: 19px;
+}
+header label#top{
+    padding: 0 0 0 15px;
+    color: white;
+    font-size: 40px;
+    background-color: black;
+    height: 60px;
+    display: block;
+    align-content: center;
+}
+header label#bottom{
+    display: block;
+    font-size: 40px;
+    height: 60px;
+    text-align: center;
+    align-content: center;
+}

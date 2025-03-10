@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    transition: all 0.15;
+    font-family: Kanit;
+}
+body >header{
+    background-color: skyblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20%;
+} 
+body >header h1{
+    color: white;
+    font-size: 50px;
+}
+body >header ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body >header ul li{
+    list-style: none;
+    color: white;
+    font-size: 30px;
+    margin: 0 20px;
+    border-radius: 3px;
+}
+body >header ul li:hover{
+    background-color: rgb(95, 189, 226);
+    cursor: pointer;
+}
+body >header ul li:active{
+    background-color: rgb(49, 172, 221);
+}
+main{
+    width: 60%;
+    margin: 0 auto;
+}
+main header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main header h1{
+    flex:7;
+    font-size: 40px;
+}
+main header label{
+    font-size: 20px;
+    margin: 0 10px;
+}
+main header select{
+    padding: 5px;
+}
+main header{
+    padding: 15px 0;
+    border-bottom: 2px solid
+}
+main section{
+    display: flex;
+    align-items:center;
+    margin: 25px 0 0 0;
+    gap: 20px;
+}
+main section figure{
+    background-color: lightgrey;
+    padding:15px;
+    flex:1
+}
+main section figure > *{
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+}
+main section figure img{
+    border-radius: 50%;
+    width: 70%;
+    background-color: brown;
+}
+main section figure p{
+    font-size: 18px;
+}
+main section figure div{
+    display: flex;
+    width: 100%;
+    margin:0;
+    align-items: center;
+}
+main section figure div p{
+flex: 1;
+text-align: center;
+margin: 20px 0;
+font-size: 30px;
+}
+
+body > div{
+    width: 60%;
+    border: 3px solid;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position:fixed;
+    bottom: 0px;
+    left: 50%;
+    translate: -50%;
+    background-color: lightgray;
+}
+body > div button{
+    background-color: skyblue;
+    box-shadow: 2px 2px 1px black;
+    padding: 5px 20px;
+    margin: 0 20px 0 0;
+}
+body > div button:hover{
+    background-color: rgb(106, 195, 230);
+}
+body > div button:active{
+    background-color: rgb(81, 188, 230);
+    box-shadow: none;
+}
+body > div section{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+body > div section img{
+    margin: 0 20px;
+}
+body > div section article{
+    max-width: 400px;
+    max-height: fit-content;
+}
+
+#red{
+    color:red
+}
+#blue{
+    color:blue
+}

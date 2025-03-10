@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather Forecast</title>
+</head>
+<body>
+    <header>
+        <h1>DojoWeather</h1>
+        <ul>
+            <li onclick="throwAlert()">Burbank</li>
+            <li onclick="throwAlert()">Chicago</li>
+            <li onclick="throwAlert()">Dallas</li>
+        </ul>
+    </header>
+    <main>
+        <header>
+            <h1>San Jose</h1>
+            <label for="">show temperature in </label>
+            <select onchange="changeDegree(this)">
+                <option value="C">°C</option>
+                <option value="F">°F</option>
+            </select>
+        </header>
+        <section>
+            <figure>
+                <h1>today</h1>
+                <img src="icons/some_rain.png" alt="cloudsuns">
+                <p>some rain</p>
+                <div>
+                    <p id="red"><span>17</span>°</p>
+                    <p id="blue"><span>13</span>°</p>
+                </div>
+            </figure>
+            <figure>
+                <h1>tomorrow</h1>
+                <img src="icons/some_sun.png" alt="cloudsuns">
+                <p>some sun</p>
+                <div>
+                    <p id="red"><span>24</span>°</p>
+                    <p id="blue"><span>20</span>°</p>
+                </div>
+            </figure>
+            <figure>
+                <h1>Friday</h1>
+                <img src="icons/some_clouds.png" alt="cloudsuns">
+                <p>some cloud</p>
+                <div>
+                    <p id="red"><span>20</span>°</p>
+                    <p id="blue"><span>18</span>°</p>
+                </div>
+            </figure>
+            <figure>
+                <h1>Saturday</h1>
+                <img src="icons/some_sun.png" alt="cloudsuns">
+                <p>some sun</p>
+                <div>
+                    <p id="red"><span>27</span>°</p>
+                    <p id="blue"><span>22</span>°</p>
+                </div>
+            </figure>
+        </section>
+    </main>
+
+    <div>
+        <section>
+            <img src="icons/cookie.png" alt="cookie">
+            <article>
+                <h1>Stop! Cookie time</h1>
+                <p>We use cookies (sadly not edible ones) to personalize content and ads, to provide social media features and to analyse out traffic. <a href="#"> Read more....</a></p>
+            </article>
+        </section>
+        <button onclick="hide()">I Accept</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

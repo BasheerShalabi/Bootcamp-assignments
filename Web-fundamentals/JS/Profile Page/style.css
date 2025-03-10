@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: Kanit;
+    margin: 0px;
+    padding: 0px;
+    transition: all;
+    transition-duration: 100ms;
+}
+h2,h3{
+    font-weight: 400;
+}
+
+.feed img{
+    width: 20px;
+    margin-right: 10px;
+}
+.side-bar img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+span{
+    font-size: 20px;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 20px;
+    background-color: black;
+    height: 50px;
+    box-shadow: 0px 0px 5px rgb(180, 180, 161) ;
+}
+.nav-group{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-title{
+    font-weight: 300;
+    color: white;
+    margin-left: 20vw;
+    margin-right: 40px;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.nav a{
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 20px;
+    color: rgba(240, 240, 240, 0.37);
+}
+a:hover,a.active{
+    color:rgb(189, 189, 189);
+}
+
+
+.btn{
+    padding-inline: 15px;
+    padding-block: 5px;
+    border-radius: 5px;
+    background-color: cadetblue;
+    color: white;
+    border: none;
+    box-shadow: 3px 3px 5px rgb(29, 54, 80);
+    margin-right: 20vw;
+}
+.btn:hover{
+     background-color: rgb(58, 46, 129);
+     cursor: pointer;
+}
+
+.profile-card{
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 0px 4px #52483c;
+    margin-bottom: 20px;
+}
+.card{
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 0px 4px #52483c;
+    margin-bottom: 20px;
+}
+.card div.filler{
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    padding: 20px;
+}
+
+.filler{
+    color: white;
+}
+
+.side-bar div.card div.filler{
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    font-weight: 200;
+    padding: 10px;
+}
+
+.profile-card div.filler{
+    background-color: #00a5ba;
+    display: block;
+    padding: 30px;
+}
+
+#profile{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    width: 15%;
+    border: 3px solid white;
+    border-radius: 50%;
+    translate: -50% -50%;
+}
+
+.user-info{
+padding-top: 50px;
+padding-inline: 20px;
+
+}
+.card-info{
+padding: 10px;
+
+}
+
+.footer{
+ margin-top: 20px;
+ padding-bottom: 10px;
+}
+
+.location{
+    margin-bottom: 20px;
+}
+.main{
+ margin: 0px auto;
+ display: flex;
+ width: 60vw;
+ justify-content: center;
+}
+
+.feed{
+    padding: 20px;
+    width: 65%;
+  
+}
+.side-bar{
+    padding: 20px;
+    width: 45%;
+}
+.list-item{
+    margin:2px 2px 3px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.list-item div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.pin-div{
+    padding-inline: 10px;
+    background-color: rgb(163, 163, 163);
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 5px 0 0;
+
+}
+.card-footer{
+    border-top: 1px solid grey;
+    padding: 10px;
+}
+
+.card-info h3{
+   color: grey;
+}

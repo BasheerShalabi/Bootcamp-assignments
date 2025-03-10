@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Profile</title>
+</head>
+
+<body>
+
+    <div class="nav">
+        <div class="nav-group">
+            <h1 class="nav-title">Profile</h1>
+            <div class="nav-links">
+                <div><a href="#">Home</a></div>
+                <div><a href="#" class="active">My Profile</a></div>
+                <div><a href="#">Find Connections</a></div>
+            </div>
+        </div>
+        <div><button class="btn">Sign Out</button></div>
+    </div>
+
+    <div class="main">
+        <div class="feed">
+            <div class="profile-card">
+                <img id="profile" src="icons/user-circle.png" alt="user-icon">
+                <div class="filler"></div>
+                <div class="user-info">
+                    <h2>Basheer Shalabi</h2>
+                    <div class="location">
+                        <img src="icons/map-marker.png" alt="profile_img"><span>Ramallah</span>
+                    </div>
+                    <p>Developer | Engineer | Problem Solver</p>
+                    <p>Master of Shadows and the Internet</p>
+                    <div class="footer">
+                        <img src="icons/gear.png" alt="settings"><a href="#" onclick="changeName()">Edit Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="filler"><span>Education</span></div>
+                <div class="card-info">
+                    <h2>Coding Dojo - Full Stack Bootcamp</h2>
+                    <h3>Dec 2019 - March 2020</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat commodi quos at debitis, quo
+                        odit possimus libero non fugit veritatis laborum, deserunt voluptate. Voluptatum assumenda odio
+                        recusandae laborum neque exercitationem.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="filler"><span>Information</span></div>
+                <div class="card-info">
+
+                    <p>Developer | Engineer | Problem Solver</p>
+                    <p>Master of Shadows and the Internet</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus blanditiis assumenda molestias
+                        ab at voluptatem optio esse perferendis similique facere voluptate distinctio praesentium beatae
+                        magnam vel, temporibus impedit qui hic.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="side-bar">
+
+            <div class="card">
+                <div class="filler">
+                    <div class="pin-div" id="connections">3</div>
+                    <span>Connection Request</span>
+                </div>
+                <div class="card-info">
+                    <div class="list-item" id="list-item1">
+                        <div>
+                            <img src="icons/user-circle.png" alt="gear"><span>Todd E</span>
+                        </div>
+                        <div>
+                            <img src="icons/accept.png" alt="accept" onclick="List1(false)"><img src="icons/decline.png" alt="decline" onclick="List1(true)">
+                        </div>
+                    </div>
+                    <div class="list-item" id="list-item2">
+                        <div>
+                            <img src="icons/user-circle.png" alt="gear"><span>Dr Phil</span>
+                        </div>
+                        <div>
+                            <img src="icons/accept.png" alt="accept" onclick="List2(false)"><img src="icons/decline.png" alt="decline" onclick="List2(true)">
+                        </div>
+                    </div>
+                    <div class="list-item" id="list-item3">
+                        <div>
+                            <img src="icons/user-circle.png" alt="gear"><span> N Tesla</span>
+                        </div>
+                        <div>
+                            <img src="icons/accept.png" alt="accept" onclick="List3(false)"><img src="icons/decline.png" alt="decline" onclick="List3(true)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="filler">
+                    <div class="pin-div" id="ur-connections">7</div>
+                    <span>Your connections</span>
+                </div>
+                <div class="card-info">
+                    <div class="list-item">
+                        <div>
+                            <img src="icons/user-circle.png" alt="gear"><span>Todd E</span>
+                        </div>
+
+                    </div>
+                    <div class="list-item">
+                        <div>
+                            <img src="icons/user-circle.png" alt="gear"><span>Dr Phil</span>
+                        </div>
+
+                    </div>
+                    <div class="list-item">
+                        <div>
+                            <img src="icons/user-circle.png" alt="gear"><span> N Tesla</span>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div>
+                            <img src="icons/user-circle.png" alt="gear"><span> N Tesla</span>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div>
+                            <img src="icons/user-circle.png" alt="gear"><span> N Tesla</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="">View More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script src="script.js"></script>
+</body>
+
+</html>

@@ -37,7 +37,7 @@ function calculate(){
     
     if(!(expression.includes('+') || expression.includes('-') || expression.includes('*') || expression.includes('/'))) return
     expression=`${expression}${display.innerText}`
-   display.innerText=eval(expression).toFixed(3)
+   display.innerText=eval(expression).toFixed(4).replace(/\.?0+$/, '')
    console.log(expression)
    
    expression=""

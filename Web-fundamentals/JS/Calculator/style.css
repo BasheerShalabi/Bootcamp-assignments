@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    font-family: Roboto Mono;
+    transition: all 0.1s;
+}
+#calculator{
+    background-color: rgb(60, 60, 60);
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row button{
+    margin:10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 25px;
+    background-color: darkgray;
+    box-shadow: 2px 2px black;
+}
+.row button:hover,#equals:hover{
+    background-color: rgb(133, 133, 133);
+}
+.row button:active{
+    background-color: rgb(100, 100, 100);
+    box-shadow: none;
+}
+#equals:active{
+    background-color: rgb(90, 90, 90);
+    box-shadow: none;
+}
+#equals{
+   width: 80%;
+   border-radius: 10px;
+   background-color: gray;
+}
+button.operator{
+    background-color:rgb(204, 135, 44);
+}
+button.operator:hover{
+    background-color:rgb(170, 121, 57);
+}
+button.operator:active{
+    background-color:rgb(139, 100, 48);
+}
+#display{
+    color: white;
+    font-size: 40px;
+    margin: 0 10%;
+    direction:rtl;
+    max-width: 300px;
+}

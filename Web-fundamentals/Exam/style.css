@@ -1,0 +1,219 @@
+/* This is a basic style file for an exam in Axsos Academy */
+/* By Basheer Shalabi */
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset */
+
+* {
+    padding: 0;
+    margin: 0;
+    z-index: 100;
+    font-family: Kanit;
+}
+
+/* Body */
+
+body {
+    width: 1500px;
+    margin: 0 auto;
+}
+
+body>div {
+
+    background: url("content/yoga-header.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+body hr {
+    border: 3px solid white;
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* Header section of the page */
+
+header {
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header>img {
+    width: 200px;
+}
+
+header section ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header section ul {
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    list-style: none;
+}
+
+header section ul li {
+    display: flex;
+    align-items: center;
+}
+
+header section ul li a {
+    color: white;
+    display: inline;
+    margin: 5px 10px;
+}
+
+header section ul li span {
+    display: inline;
+    font-size: 50px;
+    font-weight: 200;
+}
+
+header section div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border: 3px solid;
+    padding: 4px;
+}
+
+header section div input {
+    width: 100%;
+    border: none;
+    font-size: 30px;
+    outline: none;
+    margin: 0 5px;
+}
+
+header section div img {
+    width: 30px;
+}
+
+header section div img[alt='sound']:hover {
+    cursor: pointer;
+}
+
+/* Main section of the page */
+
+
+#top-main-section {
+    display: block;
+    margin: 200px 0 200px 0;
+    color: white;
+}
+
+
+#top-main-section h1 {
+    width: fit-content;
+    margin: 0 auto 20px auto;
+    font-size: 50px;
+}
+
+#top-main-section h4 {
+    width: fit-content;
+    margin: 0 auto 20px auto;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+#top-main-section input {
+    display: block;
+    margin: 0 auto;
+    background-color: #f6493e;
+    color: white;
+    padding: 10px 70px;
+    font-size: 30px;
+    border: 4px solid black;
+    box-shadow: 4px 4px black;
+}
+
+#top-main-section input:hover {
+    background-color: white;
+    color: #f6493e;
+}
+
+#bottom-main-section {
+    background-color: #eeeeee;
+    padding: 100px 0 130px 0;
+}
+
+#bottom-main-section h1 {
+    width: fit-content;
+    margin: 0 auto 20px auto;
+    font-size: 50px;
+}
+
+#bottom-main-section h4 {
+    width: fit-content;
+    max-width: 1000px;
+    text-align: center;
+    margin: 0 auto 20px auto;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+#bottom-main-section ul {
+    display: flex;
+    list-style: none;
+}
+
+#bottom-main-section ul li {
+    flex: 1;
+}
+
+#bottom-main-section ul li * {
+    margin: 0 auto;
+    width: fit-content;
+    display: block;
+}
+
+#bottom-main-section ul li img {
+    border-radius: 50%;
+    width: 50%;
+}
+
+#bottom-main-section ul li h3 {
+    font-size: 30px;
+}
+
+#bottom-main-section ul li p {
+    font-size: 27px;
+}
+
+/* Footer section of the page */
+
+footer {
+    background-color: #e53400;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer h2 {
+    font-size: 28px;
+}
+
+footer h2 a {
+    color: hsl(206.84deg 36.19% 58.82%)
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+footer ul li img {
+    border-radius: 50%;
+    width: 50px;
+    margin: 0 5px;
+}

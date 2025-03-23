@@ -3,11 +3,12 @@ var expression =""
 var display=document.getElementById("display")
 var isInOp=false
 var font =40
-
+var leftNum = 0
+var rightNum = 0;
 function press(num){
    
      if(num=='.' && !display.innerText.includes('.')){
-         display.innerText=`${display.innerText}${num}`
+         display.innerText=` ${display.innerText}${num} `
      }else if(isInOp){
         display.innerText=`${num}`
         isInOp=false
@@ -28,6 +29,7 @@ function clr(){
 }
 
 function setOP(op){
+   // leftNum = Number(display.innerText)
     expression = `${display.innerText}${op}`
     isInOp=true
     
@@ -39,7 +41,7 @@ function calculate(){
     expression=`${expression}${display.innerText}`
    display.innerText=eval(expression).toFixed(4).replace(/\.?0+$/, '')
    console.log(expression)
-   
+   isInOp=true
    expression=""
+
 }
-var container = document.getElementById("expretion")

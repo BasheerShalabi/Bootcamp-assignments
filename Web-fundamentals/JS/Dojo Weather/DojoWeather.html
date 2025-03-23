@@ -10,9 +10,9 @@
     <header>
         <h1>DojoWeather</h1>
         <ul>
-            <li onclick="throwAlert()">Burbank</li>
-            <li onclick="throwAlert()">Chicago</li>
-            <li onclick="throwAlert()">Dallas</li>
+            <li onclick="throwAlert(this)">Burbank</li>
+            <li onclick="throwAlert(this)">Chicago</li>
+            <li onclick="throwAlert(this)">Dallas</li>
         </ul>
     </header>
     <main>
@@ -27,7 +27,7 @@
         <section>
             <figure>
                 <h1>today</h1>
-                <img src="icons/some_rain.png" alt="cloudsuns">
+                <img onclick="Change(this)" src="icons/some_rain.png" alt="cloudsuns">
                 <p>some rain</p>
                 <div>
                     <p id="red"><span>17</span>°</p>

@@ -1,5 +1,5 @@
-function throwAlert(){
-    alert("Loading Weather info ........")
+function throwAlert(el){
+    alert(`Loading Weather info for ${el.innerText}........`)
 }
 
 
@@ -17,4 +17,8 @@ function changeDegree(element){
 function hide(){
     var cookie = document.querySelector("body > div")
     cookie.remove()
+}
+
+function Change(el){
+    el.src = "icons/some_sun.png"
 }

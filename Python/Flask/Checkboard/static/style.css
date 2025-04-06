@@ -1,0 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+section{
+    display: flex;
+    width: 70% ;
+    margin: 0 auto;
+}
+
+div{
+    flex: 1;
+    border: 1px solid black;
+}

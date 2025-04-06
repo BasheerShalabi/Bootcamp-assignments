@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <div>
+        <h1>Counter</h1>
+        <h3>{{counter}} times</h3>
+        <h3>real counter : {{actual}} times</h3>
+        <form action="/increment2">
+            <input type="submit" value="add 2" >
+        </form>
+        <form action="/reset">
+            <input type="submit" value="reset" >
+        </form>
+        <form action="/increment_by" method="post">
+            <input type="number" name="value" value="0">
+            <input type="submit" value="add">
+        </form>
+    </div>
+    <a href="/destroy_session">Destroy</a>
+</body>
+</html>

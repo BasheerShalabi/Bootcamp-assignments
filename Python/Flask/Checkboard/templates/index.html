@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <title>Checkboard</title>
+</head>
+
+<body>
+    {% for j in range(x)%}
+    <section>
+
+        {% for i in range(y)%}
+        {% if j%2==0 %}
+        {% if i%2==0 %}
+        <div style="height:{{95/x}}vh; background-color:{{color1}};"></div>
+        {% else %}
+        <div style="height:{{95/x}}vh; background-color:{{color2}};"></div>
+        {% endif %}
+        {% else %}
+        {% if i%2==0 %}
+        <div style="height:{{95/x}}vh; background-color:{{color2}};"></div>
+        {% else %}
+        <div style="height:{{95/x}}vh; background-color:{{color1}};"></div>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+
+    </section>
+    {% endfor %}
+</body>
+
+</html>

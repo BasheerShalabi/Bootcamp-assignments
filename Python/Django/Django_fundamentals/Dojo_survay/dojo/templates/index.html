@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DojoSurvey</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styling.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <form action="result" method="post">
+            {% csrf_token %}
+            <label for="username">Your name</label>
+            <input type="text" name="username">
+            <br><br>
+            <label for="location">Dojo Location</label>
+            <select name="location" id="location">
+                <option value="san_jose">San Jose</option>
+                <option value="masha">Masha</option>
+                <option value="nablus">Nablus</option>
+            </select>
+            <br><br>
+            <label for="language">Favorite Language</label>
+            <select name="language" id="language">
+                <option value="python">Python</option>
+                <option value="css">Css</option>
+                <option value="html">Html</option>
+            </select>
+            <br><br>
+            <label for="comment">Comment (optional):</label>
+            <br><br>
+            <textarea name="comment" id="comment"></textarea>
+            <br><br>
+            <label for="fun">are you having fun?</label>
+            <br><br>
+            <label for="yes">yes</label>
+            <input type="radio" name="fun" id="yes" value="Yes" >
+            <label for="no">no</label>
+            <input type="radio" name="fun" id="no" value="No" checked>
+            <br><br>
+            <label for="costume">I want a fancy costume</label>
+            <input type="checkbox" name="costume">
+            <br><br>
+            <label for="salary">I want higher salary</label>
+            <input type="checkbox" name="salary">
+            <br><br>
+            <input type="submit" value="Button" id="submit">
+        </form>
+    </div>
+
+</body>
+
+</html>

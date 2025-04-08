@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survay Index</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styling.css' %}">
+
+</head>
+<body>
+    <div class="container">
+        <h2>Submitted Info</h2>
+        <div class="flex"><span>Name:</span><span>{{user}}</span></div>
+        <div class="flex"><span>Dojo Location:</span><span>{{location}}</span></div>
+        <div class="flex"><span>Favorite Language:</span><span>{{language}}!!!</span></div>
+        <div class="flex"><span>Comment:</span><span>{{comment}}</span></div>
+        <div class="flex"><span>Is having fun:</span><span>{{fun}}</span></div>
+        {%if salary%}
+        <div class="flex"><span>High salary</span><span>Yes</span></div>
+        {%else%}
+        <div class="flex"><span>High salary</span><span>No</span></div>
+        {%endif%}
+        {%if costume%}
+        <div class="flex"><span>New costume</span><span>Yes</span></div>
+        {%else%}
+        <div class="flex"><span>New costume</span><span>No</span></div>
+        {%endif%}
+     <form action="/">
+        {% csrf_token %}
+        <input type="submit" value="Go Back" id="submit">
+    </form>
+    </div>
+   
+</body>
+</html>

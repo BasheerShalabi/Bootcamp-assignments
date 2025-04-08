@@ -1,0 +1,47 @@
+.container{
+    border: solid black 4px;
+    padding: 20px;
+    width: 370px;
+    margin: 50px auto;
+}
+input[type="text"]{
+margin-left: 75px;
+width: 200px;
+height: 20px;
+border: solid ;
+}
+
+select{
+    margin-left: 25px;
+    width: 210px;
+    height: 30px;
+    border: solid ;
+}
+#location{
+    margin-left: 50px;
+}
+textarea{
+    width: 350px;
+    height: 70px;
+    border: solid;
+}
+#submit{
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: rgb(0, 187, 187);
+    border: solid black;
+    box-shadow: 3px 2px black;
+    margin: 20px 0 0 250px;
+}
+.flex{
+    display: flex;
+    padding: 5px;
+}
+span{
+    flex: 1;
+}
+h2{
+    text-decoration: underline;
+}
+

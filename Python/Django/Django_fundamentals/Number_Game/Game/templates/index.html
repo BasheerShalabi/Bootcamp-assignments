@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game !!!!! ! ! !!</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h2>Welcome to the Great Number Game!!</h2>
+    <p>I am thinking of a number between 1 and 100</p>
+    <p>Take a guess!</p>
+
+
+    {% if request.session.result == 0 %}
+        <form action="handle_guess" method="post">
+            {% csrf_token %}
+            <input type="text" name="guess" id="guess">
+            <input type="submit" value="Submit">
+        </form>
+        {% endif %}
+        
+    {% if request.session.result == 1 %}
+        <div class="inner-div red">
+            <h1>Too Low!</h1>
+        </div>
+        <form action="handle_guess" method="post">
+            {% csrf_token %}
+            <input type="text" name="guess" id="guess">
+            <input type="submit" value="Submit">
+        </form>
+    {% endif %}
+    
+    {% if request.session.result == 2 %}
+        <div class="inner-div red">
+            <h1>Too High!</h1>
+        </div>
+        <form action="handle_guess" method="post">
+            {% csrf_token %}
+            <input type="text" name="guess" id="guess">
+            <input type="submit" value="Submit">
+        </form>
+    {% endif %}
+
+    {% if request.session.result == 3 %}
+        <div class="inner-div green">
+            <h1>{{ request.session.number }} was the number!</h1>
+            <h1> it took you {{ request.session.attempts }} attempts !</h1>
+        </div>
+
+        <form action="leaderboard" method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Enter your name here">
+            <input type="submit" value="Submit Score">
+        </form>
+    {% endif %}
+
+    {% if request.session.result == 4 %}
+        <div class="inner-div red">
+            <h1> You Lose !</h1>
+            <form action="play_again">
+                {% csrf_token %}
+                <input type="submit" value="Try Again!">
+            </form>
+        </div>
+    {% endif %}
+
+</body>
+</html>

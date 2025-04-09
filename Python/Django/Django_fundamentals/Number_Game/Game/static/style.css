@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: fit-content;
+    margin: 20px auto;
+}
+
+body > *{
+    width: fit-content;
+    margin: 20px auto;
+}
+
+body input[type = 'submit']{
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    border: 2px solid black;
+    box-shadow: 2px 2px black;
+}
+
+body input[type = 'text']{
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    border: 2px solid black;
+}
+
+.inner-div{
+    border: 3px solid black;
+    padding: 25px;
+    color: white;
+}
+
+.inner-div *{
+    width: fit-content;
+    margin: 10px auto;
+}
+
+.red{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
+}
+table{
+    border: 2px solid black;
+}
+table *{
+    border: 2px solid black;
+    padding: 10px;
+}

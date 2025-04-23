@@ -13,14 +13,21 @@
     <form action="/shows/new" method="POST">
         {% csrf_token %}
         <label for="title">Title:</label><br>
-        <input type="text" id="title" name="title" required><br><br>
+        <input type="text" id="title" name="title" ><br><br>
         <label for="network">Network:</label><br>
-        <input type="text" id="network" name="network" required><br><br>
+        <input type="text" id="network" name="network" ><br><br>
         <label for="release_date">Release Date:</label><br>
-        <input type="date" id="release_date" name="release_date" required><br><br>
+        <input type="date" id="release_date" name="release_date" ><br><br>
         <label for="description">Description:</label><br>
         <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
         <input type="submit" value="Add Show">
     </form>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 </body>
 </html>

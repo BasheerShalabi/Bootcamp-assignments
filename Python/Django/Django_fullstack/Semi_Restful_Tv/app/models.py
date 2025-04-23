@@ -1,6 +1,20 @@
 from django.db import models
 
 # Create your models here.
+class ShowManager(models.Manager):
+    def validate_show(self, post):
+        errors = {}
+        if Show.objects.filter(title=post['title']).exists():
+            errors['title'] = "Title already exists."
+        if len(post['title']) < 2:
+            errors['title'] = "Title must be at least 2 characters long."
+        if len(post['network']) < 3:
+            errors['network'] = "Network must be at least 3 characters long."
+        if len(post['description']) < 10 and len(post['description']) != 0:
+            errors['description'] = "Description must be at least 10 characters long."
+        if len(post['release_date']) == 0:
+            errors['release_date'] = "Release date cannot be empty."
+        return errors
 
 class Show(models.Model):
     title = models.CharField(max_length=100)
@@ -9,9 +23,10 @@ class Show(models.Model):
     release_date = models.DateField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    objects = ShowManager()
 
 def add_show(post):
-    new =Show.objects.create(
+    new = Show.objects.create(
         title=post['title'],
         network=post['network'],
         description=post['description'],

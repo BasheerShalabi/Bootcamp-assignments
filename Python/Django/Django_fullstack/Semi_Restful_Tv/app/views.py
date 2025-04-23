@@ -1,5 +1,6 @@
 from django.shortcuts import render ,redirect
 from . import models
+from django.contrib import messages
 # Create your views here.
 
 def index(request):
@@ -13,6 +14,11 @@ def shows(request):
 
 def new_show(request):
     if request.method == 'POST':
+        errors = models.Show.objects.validate_show(request.POST)
+        if errors:
+            for key, value in errors.items():
+                messages.error(request, value)
+            return redirect('/shows/new')
         show_id = models.add_show(request.POST)
         return redirect(f'/shows/{show_id}')
     return render(request, 'new_show.html')
@@ -25,6 +31,11 @@ def show_detail(request, show_id):
 
 def edit_show(request, show_id):
     if request.method == 'POST':
+        errors = models.Show.objects.validate_show(request.POST)
+        if errors:
+            for key, value in errors.items():
+                messages.error(request, value)
+            return redirect(f'/shows/{show_id}/edit')
         models.update_show(show_id, request.POST)
         return redirect(f'/shows/{show_id}')
     context = {

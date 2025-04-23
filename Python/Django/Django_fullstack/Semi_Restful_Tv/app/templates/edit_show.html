@@ -8,6 +8,7 @@
     <title>Edit Show</title>
 </head>
 <body>
+    <a class="go-back-anchor" href="/shows/{{show.id}}">Go Back</a>
     <h1>Edit Show {{show.id}}</h1>
     <form action="/shows/{{show.id}}/edit" method="POST">
         {% csrf_token %}

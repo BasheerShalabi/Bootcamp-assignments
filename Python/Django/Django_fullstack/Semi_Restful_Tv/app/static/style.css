@@ -1,0 +1,24 @@
+
+body{
+    position: relative;
+}
+
+.table , .table *{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+body a{
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.go-back-anchor{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    margin: 10px 0;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}

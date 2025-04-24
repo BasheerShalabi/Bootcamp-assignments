@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+</head>
+<body>
+    <h2>Comments for Course: {{ course.name }}</h2>
+    <form action="/add_comment/{{ course.id }}" method="POST">
+        {% csrf_token %}
+        <label for="comment">Add a Comment:</label>
+        <textarea name="comment" required></textarea>
+        <br><br>
+        <button type="submit">Add Comment</button>
+    </form>
+    {% if errors %}
+        {% for key, value in errors.items %}
+            <p style="color: red;">{{ value }}</p>
+        {% endfor %}
+    {% endif %}
+    <h2>Comments</h2>
+    <table>
+        <tr>
+            <th>Comment</th>
+            <th>Date Added</th>
+        </tr>
+        {% for comment in comments %}
+        <tr>
+            <td>{{ comment.comment }}</td>
+            <td>{{ comment.created_at }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Go Back</a>
+</body>
+</html>

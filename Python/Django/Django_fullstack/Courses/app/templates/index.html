@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+</head>
+<body>
+    <h2>Add a new course</h2>
+    <form action="/add_course" method="POST">
+        {% csrf_token %}
+        <label for="name">Course Name:</label>
+        <input type="text" name="name" required>
+        <br><br>
+        <label for="description">Description</label>
+        <textarea name="description" required></textarea>
+        <br><br>
+        <button type="submit">Add Course</button>
+    </form>
+    {% if errors %}
+    {% for key,value in errors.items %}
+        <p style="color: red;">{{ value }}</p>
+    {% endfor %}
+    {% endif %}
+    <h2>Courses</h2>
+    <table>
+        <tr>
+            <th>Course Name</th>
+            <th>Description</th>
+            <th>Date Added</th>
+            <th>Actions</th>
+        </tr>
+        {% for course in courses %}
+        <tr>
+            <td>{{ course.name }}</td>
+            <td>{{ course.description.description }}</td>
+            <td>{{ course.created_at }}</td>
+            <td>
+                <a href="/delete_course/{{ course.id }}">Delete</a>
+                <a href="/comments/{{ course.id }}">Comments</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

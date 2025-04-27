@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Dojo Wall</title>
+</head>
+<body>
+    <div class="header">
+        <h1>CodingDojo Wall</h1>
+        <div class="right-header">
+            <p>Welcome {{ request.session.user.first_name}}!</p>
+            <a href="/logout">Log Off</a>
+        </div>
+    </div>
+    <div class="main-form">
+        <form action="add_message" method="post">
+            {% csrf_token %}
+            <label for="message">
+                Post a message:
+            </label><br><br>
+            <textarea name="message" cols="30" rows="3"></textarea><br>
+            <input type="submit" value="Post Message"><br>
+        </form>
+        {% for post in posts %}
+            <div class="message">
+                <div class="message-header">
+                    <p>{{ post.user.first_name }} - {{ post.created_at }}</p>
+                    {% if post.user.id == request.session.user.id %}
+                    <form action="/delete/{{ post.id }}" method="post">
+                        {% csrf_token %}
+                        <input type="submit" value="Delete Message">
+                    </form>
+                    {% if message %}
+                        <p>{{ message }}</p>
+                    {% endif %}
+                    {% endif %}
+                </div>
+                <p>{{ post.message }}</p>
+                {% for comment in post.comments.all %}
+                    <div class="comment">
+                        <p>{{ comment.user.first_name }} - {{ comment.created_at }}</p>
+                        <p>{{ comment.comment }}</p>
+                    </div>
+                {% endfor %}
+                <form action="add_comment/{{ post.id }}" method="post">
+                    {% csrf_token %}
+                    <label for="comment">
+                        Post a comment:
+                    </label><br><br>
+                    <textarea name="comment" cols="30" rows="3"></textarea><br>
+                    <input type="submit" value="Post Comment"><br>
+                </form>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

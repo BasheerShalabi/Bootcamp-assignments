@@ -1,0 +1,35 @@
+.form-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.right-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.right-header *{
+    margin: 0 10px;
+}
+
+.message{
+    margin-left: 40px;
+}
+
+.comment{
+    margin-left: 60px;
+    margin-top: 10px;
+}
+.message-header{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-form{
+    width: fit-content;
+    margin: 0 auto
+}

@@ -54,6 +54,7 @@ def books_detail(request ,id):
      if request.method == "POST":
           models.add_author_to_book(id,request.POST['author_id'])
           return redirect(f"/books/{id}")
+     
      return render(request,'books_details.html',context)
 
 def author_detail(request ,id):

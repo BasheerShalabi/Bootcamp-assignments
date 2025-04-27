@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Books</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome {{ request.session.user.first_name }}</h1>
+        <a href="/books">Go Back</a>
+    </div>
+    <div>
+        <h1>{{ book.title }}</h1>
+        <p>Added by: {{ book.uploaded_by.first_name }} {{ book.uploaded_by.last_name}}</p>
+        <p>Added on: {{ book.create_at}}</p>
+        <p>Last updated: {{ book.updated_at}}</p>
+        <p>Description: {{ book.description }}</p>
+
+        <div>
+            <h1>Users who like this book</h1>
+                <ul>
+                    {% for user in favorited_by %}
+                    <li>{{ user.first_name }} {{ user.last_name }}</li>
+                    {% if user.id == request.session.user.id %}
+                    <form action="/books/unfavorite" method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="book_id" value="{{ book.id }}">
+                        <input type="submit" value="Un-favorites">
+                    </form>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+                {% if book in favorited_books %}
+                            <p></p>
+                        {% else %}
+                            <form action="/books/add_favorite" method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="book_id" value="{{ book.id }}">
+                                <input type="submit" value="Add to favorites">
+                            </form>
+                        {% endif %}
+        </div>
+    </div>
+</body>
+</html>

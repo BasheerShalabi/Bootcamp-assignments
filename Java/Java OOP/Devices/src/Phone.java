@@ -7,7 +7,12 @@ public class Phone extends Device {
     }
 
     public void makeCall(){
+        if (this.battery <= 0) {
+            System.out.println("Battery is empty!");
+            return;
+        }
         this.battery -= 5;
+        if (this.battery <= 0) this.battery = 0;
         System.out.println("Calling...");
         checkBattery();
     }

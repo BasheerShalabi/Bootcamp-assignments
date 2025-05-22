@@ -18,8 +18,8 @@ public class HellohumanApplication {
 	public class HelloController{
 
 		@RequestMapping("/")
-		public String fullname(@RequestParam(value = "name",required = false,defaultValue = "Human") String name , @RequestParam(value = "last_name",required = false,defaultValue = "") String last_name ,@RequestParam(value = "times",required = false,defaultValue = "0") int times) {
-			String response = "Hello " + name + " " + last_name + "! ";
+		public String fullname(@RequestParam(value = "name",required = false,defaultValue = "Human") String name , @RequestParam(value = "last_name",required = false,defaultValue = "") String last_name ,@RequestParam(value = "times",required = false,defaultValue = "1") int times) {
+			String response = "";
 			for (int i = 0; i < times; i++) {
 				 response += "Hello " + name + " " + last_name + "! ";
 			}

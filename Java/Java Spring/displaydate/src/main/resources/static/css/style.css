@@ -1,0 +1,17 @@
+body{
+    width: 100%;
+    background-color: beige;
+}
+
+h2{
+    text-align: center;
+    margin: 100px auto;
+    color: rgb(87, 87, 255);
+}
+
+.anchors{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 100px 0 0 0;
+}

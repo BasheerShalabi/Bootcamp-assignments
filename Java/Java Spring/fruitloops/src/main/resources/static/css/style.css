@@ -1,0 +1,20 @@
+body{
+    width: 50%;
+    margin: 0 auto;
+}
+
+h1 {
+  color: rgb(252, 159, 175);
+}
+
+table{
+  margin: 0 auto;
+  border: 10px solid rgb(252, 159, 175);
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr, th, td {
+  border-bottom: 1px solid rgb(252, 159, 175);
+  padding: 10px;
+}

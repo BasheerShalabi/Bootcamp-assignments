@@ -1,0 +1,48 @@
+body{
+    padding: 10px;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+body > div{
+    border: 2px solid black;
+    padding: 10px;
+}
+
+body > label{
+    font-size: 30px;
+}
+
+body > input{
+    font-size: 20px;
+    border: 2px solid black;
+}
+
+section{
+    display: flex;
+    padding: 40px 15px;
+}
+
+section div{
+    border: 2px solid black;
+    margin: 0 20px;
+    flex:1
+}
+
+section div *{
+    width: fit-content;
+    margin: 15px auto;
+}
+
+section div input{
+    border: 2px solid black;
+    box-shadow: 2px 2px black;
+}
+
+.red{
+    color: red;
+}
+
+.green{
+    color: green;
+}

@@ -28,7 +28,7 @@ public class OmikujiApplication {
 	@RequestParam(value = "hobby") String hobby,
 	@RequestParam(value = "thing") String thing,
 	@RequestParam(value = "number") Integer number,
-	@RequestParam(value = "somthing") String something) {
+	@RequestParam(value = "something") String something) {
 		redirectAttributes.addFlashAttribute("name", name);
 		redirectAttributes.addFlashAttribute("city", city);
 		redirectAttributes.addFlashAttribute("hobby", hobby);

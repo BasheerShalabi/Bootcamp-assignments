@@ -12,5 +12,7 @@
     <h4>Description: ${book.description}</h4>
     <h4>Language: ${book.language}</h4>
     <h4>Number of pages: ${book.numberOfPages}</h4>
+
+    <a href="/books">Go back</a>
 </body>
 </html>

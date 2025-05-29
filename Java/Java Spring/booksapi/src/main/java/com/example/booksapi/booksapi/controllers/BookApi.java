@@ -16,11 +16,6 @@ import com.example.booksapi.booksapi.services.BookService;
 public class BookApi {
     @Autowired
     BookService bookService;
-    
-    @RequestMapping(value="/books", method=RequestMethod.GET)
-    public Iterable<Book> allbooks() {
-        return bookService.allBooks();
-    }
     // other methods removed for brevity
     @RequestMapping(value="/books/{id}", method=RequestMethod.PUT)
     public Book update(

@@ -1,5 +1,6 @@
 package com.example.booksapi.booksapi.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,10 +14,9 @@ import com.example.booksapi.booksapi.services.BookService;
 @RestController
 @RequestMapping("/api")
 public class BookApi {
-private final BookService bookService;
-    public BookApi(BookService bookService){
-        this.bookService = bookService;
-    }
+    @Autowired
+    BookService bookService;
+    
     @RequestMapping(value="/books", method=RequestMethod.GET)
     public Iterable<Book> allbooks() {
         return bookService.allBooks();

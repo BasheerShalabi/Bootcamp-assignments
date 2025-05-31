@@ -24,6 +24,7 @@ public abstract class GasCar extends Vehicle implements GasVehicle{
         System.out.println("Starting gas car...");
     }
 
+    @Override
     public void drive() {
         System.out.println("Driving gas car...");
         fuelCapacity-=15;

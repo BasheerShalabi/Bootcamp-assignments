@@ -1,10 +1,10 @@
 
 interface ElectricVehicle {
-    void charge();
+     void charge();
 }
 
 interface GasVehicle {
-    void fillUp();
+     void fillUp();
 }
 
 public abstract class Vehicle {

@@ -3,6 +3,7 @@ package com.example.booksapi.booksapi.services;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.booksapi.booksapi.models.Book;
@@ -11,11 +12,9 @@ import com.example.booksapi.booksapi.repositories.BookRepository;
 @Service
 public class BookService {
     // adding the book repository as a dependency
-    private final BookRepository bookRepository;
-    
-    public BookService(BookRepository bookRepository) {
-        this.bookRepository = bookRepository;
-    }
+    @Autowired
+    BookRepository bookRepository;
+
     // returns all the books
     public List<Book> allBooks() {
         return bookRepository.findAll();

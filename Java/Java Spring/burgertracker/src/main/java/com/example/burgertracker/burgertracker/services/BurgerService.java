@@ -17,7 +17,7 @@ public class BurgerService {
     BurgerRepository burgerRepository;
 
     public List<Burger> getAllBurgers() {
-        return burgerRepository.findAll();
+        return burgerRepository.findAllBurgers();
     }
 
     public Burger createBurger(Burger burger){

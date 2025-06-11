@@ -9,5 +9,7 @@ import com.example.booksapi.booksapi.models.Book;
 public interface BookRepository extends CrudRepository<Book,Long> {
 
     List<Book> findAll();
+
+    Book getByTitle(String title);
     
 }

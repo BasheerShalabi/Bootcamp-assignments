@@ -10,6 +10,6 @@ import com.example.burgertracker.burgertracker.models.Burger;
 @Repository
 public interface BurgerRepository extends CrudRepository<Burger,Long> {
 
-    List<Burger> findAll();
+    List<Burger> findAllBurgers();
 
 }

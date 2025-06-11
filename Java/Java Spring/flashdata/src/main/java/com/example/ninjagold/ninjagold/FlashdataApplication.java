@@ -41,7 +41,8 @@ public class FlashdataApplication {
 		int gold = (int) session.getAttribute("gold");
 		int earnedGold = 0;
 		String activity = "";
-		if(max == 50){
+		System.out.println("Location: " + location);
+		if(location.equals("Quest")){
 			int chance = (int) (Math.random() * 100);
 			if(chance > 50) {
 			 earnedGold = (int) (Math.random() * (max - min + 1)) + min;

@@ -1,0 +1,21 @@
+1-
+    Tesla
+    Mercedes
+
+2-
+    error name is not defined
+    Elon
+
+3-
+    12345
+    undefined
+
+4-
+    false 
+    true
+
+5-
+    value
+    [1,5,1,8,3,3]
+    1
+    5

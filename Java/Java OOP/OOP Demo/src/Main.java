@@ -31,6 +31,7 @@ public class Main {
         car2.start();
         car1.fillUp();
         car2.charge();
+        car2.print();
         System.out.println("------------------------");
         car1.drive();
         car1.drive();

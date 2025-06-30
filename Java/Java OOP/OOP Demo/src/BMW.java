@@ -3,13 +3,13 @@ public class BMW extends GasCar{
     private String year;
 
     public BMW(int tankCapacity) {
-        super("BMW",tankCapacity);
+        super(BMW.class.getName(),tankCapacity);
         this.model = "";
         this.year = "";
     }
 
     public BMW(int tankCapacity,String model,String year) {
-        super("BMW",tankCapacity);
+        super(BMW.class.getName(),tankCapacity);
         this.model = model;
         this.year = year;
     }

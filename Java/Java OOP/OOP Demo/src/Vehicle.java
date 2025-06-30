@@ -1,6 +1,9 @@
 
 interface ElectricVehicle {
      void charge();
+     default void print(){
+         System.out.print("hello im the interface");
+     }
 }
 
 interface GasVehicle {

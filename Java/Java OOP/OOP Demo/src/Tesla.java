@@ -3,13 +3,13 @@ public class Tesla extends ElectricCar{
     private String year;
 
     public Tesla(int batteryCapacity) {
-        super("Tesla",batteryCapacity);
+        super(Tesla.class.getName(),batteryCapacity);
         this.model = "";
         this.year = "";
     }
 
     public Tesla(int batteryCapacity,String model,String year) {
-        super("Tesla",batteryCapacity);
+        super(Tesla.class.getName(),batteryCapacity);
         this.model = model;
         this.year = year;
     }

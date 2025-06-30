@@ -1,3 +1,5 @@
+
+
 public abstract class GasCar extends Vehicle implements GasVehicle{
     private int fuelCapacity;
     private final int MAX_FUEL_CAPACITY;

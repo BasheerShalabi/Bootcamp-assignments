@@ -9,15 +9,20 @@ const Form = () =>{
         setForm({...form,[e.target.name]:e.target.value})
         setFormErrors({firstname:"" ,lastname:"",email:"",password:"",confirm:""})
         switch(e.target.name){
-            case "firstname" : (e.target.value.length < 2)&&(e.target.value.length > 0) ? setFormErrors({...formErrors,[e.target.name]:"First name should be at least 2 characters!"})
+            case "firstname" : (e.target.value.length < 2)&&(e.target.value.length > 0) 
+                ? setFormErrors({...formErrors,[e.target.name]:"First name should be at least 2 characters!"})
                 : setFormErrors({...formErrors,[e.target.name]:""}) ;break;
-            case "lastname" : (e.target.value.length < 2)&&(e.target.value.length > 0) ? setFormErrors({...formErrors,[e.target.name]:"Last name should be at least 2 characters!"}) 
+            case "lastname" : (e.target.value.length < 2)&&(e.target.value.length > 0) 
+                ? setFormErrors({...formErrors,[e.target.name]:"Last name should be at least 2 characters!"}) 
                 : setFormErrors({...formErrors,[e.target.name]:""}); break;
-            case "email" : (e.target.value.length < 5)&&(e.target.value.length > 0) ? setFormErrors({...formErrors,[e.target.name]:"Email should be at least 5 characters!"}) 
+            case "email" : (e.target.value.length < 5)&&(e.target.value.length > 0) 
+                ? setFormErrors({...formErrors,[e.target.name]:"Email should be at least 5 characters!"}) 
                 : setFormErrors({...formErrors,[e.target.name]:""}); break;
-            case "password" : (e.target.value.length < 8)&&(e.target.value.length > 0) ? setFormErrors({...formErrors,[e.target.name]:"Password should be at least 8 characters!"}) 
+            case "password" : (e.target.value.length < 8)&&(e.target.value.length > 0) 
+                ? setFormErrors({...formErrors,[e.target.name]:"Password should be at least 8 characters!"}) 
                 : setFormErrors({...formErrors,[e.target.name]:""}); break;
-            case "confirm" : (e.target.value != form.password)&&(e.target.value.length > 0) ? setFormErrors({...formErrors,[e.target.name]:"Passwords dont match!"}) 
+            case "confirm" : (e.target.value != form.password)&&(e.target.value.length > 0) 
+                ? setFormErrors({...formErrors,[e.target.name]:"Passwords dont match!"}) 
                 : setFormErrors({...formErrors,[e.target.name]:""}); break;
             default:break;
         }

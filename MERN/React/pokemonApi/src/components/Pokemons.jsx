@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
 const Pokemons = () => {
     const [pokemons,setPokemons] = useState([])
     
     const handleClick = () =>{
-        fetch("https://pokeapi.co/api/v2/pokemon/")
-        .then(res => res.json())
+        axios.get("https://pokeapi.co/api/v2/pokemon/")
         .then(data =>{
-            setPokemons(data.results)
+            console.log(data.data.results)
+            //setPokemons(data.results)
         })
         .catch(e=>{
             console.log(e)
@@ -18,7 +19,7 @@ const Pokemons = () => {
     console.log(pokemons)
     
     const elements = pokemons.map(e=><li>{e.name}</li>)
-    
+
   return (
     <>
     <button onClick={handleClick}>Fetch</button>

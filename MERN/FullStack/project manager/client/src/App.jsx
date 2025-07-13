@@ -6,6 +6,7 @@ import ProductForm from './components/ProductForm'
 import ProductList from './components/ProductList'
 import { Routes,Route } from 'react-router-dom'
 import ProductInfo from './components/ProductInfo'
+import ProductEdit from './components/ProductEdit'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,7 @@ function App() {
     <Routes>
       <Route index element={(<> <ProductForm/> <ProductList/> </>)} />
       <Route path={"/products/:id"} element={<ProductInfo/>}/>
+      <Route path={"/products/:id/edit"} element={<ProductEdit/>}/>
     </Routes>
       
     </>

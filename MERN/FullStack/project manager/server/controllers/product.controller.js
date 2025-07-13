@@ -28,7 +28,7 @@ module.exports.createNewProduct = (req, res) => {
   Product.create(req.body)
 
     .then((newlyCreatedProduct) => {
-      res.json({ msg : "Success!" , product: newlyCreatedProduct });
+      res.json({ msg : "batata" , product: newlyCreatedProduct });
     })
     .catch((err) => {
       res.status(400).json(err);

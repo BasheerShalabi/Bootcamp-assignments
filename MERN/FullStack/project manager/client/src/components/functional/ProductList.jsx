@@ -18,7 +18,7 @@ const ProductList = () => {
         
     },[])
     
-    const list = data.map(((el)=>(<li><Link to={`/products/${el._id}`}>{el.title}</Link></li>)))
+    const list = data.map(((el,i)=>(<li key={i}><Link to={`/products/${el._id}`}>{el.title}</Link></li>)))
 
   return (
     <>

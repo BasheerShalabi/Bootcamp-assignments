@@ -2,11 +2,11 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import ProductForm from './components/ProductForm'
-import ProductList from './components/ProductList'
+import ProductForm from './components/functional/ProductForm'
+import ProductList from './components/functional/ProductList'
 import { Routes,Route } from 'react-router-dom'
-import ProductInfo from './components/ProductInfo'
-import ProductEdit from './components/ProductEdit'
+import ProductInfo from './components/functional/ProductInfo'
+import ProductEdit from './components/functional/ProductEdit'
 
 function App() {
   const [count, setCount] = useState(0)

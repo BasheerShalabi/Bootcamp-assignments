@@ -1,30 +1,8 @@
-import { useState } from "react";
-import axios from "axios";
-const ProductForm = () => {
-    const [formData, setFormData] = useState({
-        title: '',
-        price: '',
-        description: ''
-    });
+const FormComponent = (props) => {
 
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
+    const {handleSubmit,handleChange,formData} = props
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(formData);
-        axios.post("http://localhost:3000/api/products",formData)
-        .then(res=>{
-            console.log(res.data.msg)
-            console.log(res.data.product)
-        })
-        .catch(err=>{
-            console.log(err)
-        })
-    };
-
-    return (
+  return (
         <div className="container-fluid bg-light">
             <div className="row justify-content-center">
                 <div className="col-lg-8 col-md-8 col-sm-10">
@@ -56,7 +34,7 @@ const ProductForm = () => {
                         </div>
 
                         <div className="form-group">
-                            <button className="btn btn-primary btn-block">Create</button>
+                            <button className="btn btn-primary btn-block">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -65,4 +43,4 @@ const ProductForm = () => {
     );
 }
 
-export default ProductForm
+export default FormComponent
